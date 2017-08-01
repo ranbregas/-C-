@@ -16,3 +16,21 @@ arrayName = new type[n1,n2,...](n1,n2为数组的长度)
 例：int m =2;
     int n=2;
     int[,] arry2=new int[m,n];（此时的数组并没有进行赋值，因此是初始化状态）
+    
+    
+    ArrayList数组
+    首先，ArrayList数组是一个动态数组，他的数据类型就是ArrayList，也就是说该数组中能够放下所有的元素（即char，int，string，float），并且可以混用，也就是一个数组里面
+    可以同时包含char和int等。因此它的数组大小既可以是确定的，也可以是不确定的，所以它是一个动态数组。
+    ArrayList Name =  new ArrayList(n);表示初始化Name动态数组中的前5个元素，但是此时的动态数组中的元素仍是0
+    ArrayList常用属性说明：
+    Capacity  获取或设置ArrayList课包含的元素数
+    Count 获取ArrayList中实际包含的元素个数
+    IsFixedSize   获取一个值，该值指示ArrayList是否具有固定大小
+    IsReadOnly   获取一个值，该值显示ArrayList是否为只读
+    IsSynchronized 获取一个值，该值指示是否同步对ArrayList的访问
+    Item  获取或设置指定索引处的元素
+    SyncRoot 获取可用于同步ArrayList访问的对象
+    
+    遍历数组的时候仍然能够使用foreach
+    ArrayList常用操作： Add，Insert， Clear（删除全部元素），Remove（删除第一个匹配项元素），RemoveAt（删除指定项），RemoveRange（删除一定范围内的元素）
+    Contains（查找元素，返回值为bool类型）
