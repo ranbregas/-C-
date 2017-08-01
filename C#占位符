@@ -1,0 +1,50 @@
+占位符，也就是类似于c语言中的占位符，起到的作用类似，例如string.Format("{0},{1}","匹配0","匹配1")，其输出结果就是匹配0，匹配1，因此对于占位符的多样化应用也是很多的，
+常用的是以下几种：
+  C或c Currency 货币格式
+D或d Decimal 十进制格式（十进制整数，不要和.Net的Decimal数据类型混淆了）
+E或e Exponent 指数格式
+F或f Fixed point 固定精度格式
+G或g General 常用格式
+N或n 用逗号分割千位的数字，比如1234将会被变成1,234
+P或p Percentage 百分符号格式
+R或r Round-trip 圆整（只用于浮点数）保证一个数字被转化成字符串以后可以再被转回成同样的数字
+X或x Hex 16进制格式
+
+示例：
+static void Main()   
+         {
+                   int i=12345;
+                   Console.WriteLine("{0:C}",i);   //货币
+                   Console.WriteLine("{0:D}",i);   //十进制数
+                   Console.WriteLine("{0:E}",i);    //科学技术法
+                   Console.WriteLine("{0:F}",i);   // 浮点数表示法
+                   Console.WriteLine("{0:G}",i);   //G或g General 常用格式
+                   Console.WriteLine("{0:N}",i);   //N或n 用逗号分割千位的数字
+         }
+        
+
+
+d MM/dd/yyyy ShortDatePattern（短日期模式）
+D dddd,MMMM dd,yyyy LongDatePattern（长日期模式）
+F dddd,MMMM dd,yyyy HH:mm Full date and time (long date and short time)（全日期和时间模式）
+F dddd,MMMM dd,yyyy HH:mm:ss FullDateTimePattern (long date and long time)（长日期和长时间）
+G MM/dd/yyyy HH:mm General (short date and short time)（通用模式，短日期和短时间）
+G MM/dd/yyyy HH:mm:ss General (short date and long time)（通用模式，短日期和长时间）
+M,M MMMM dd MonthDayPattern（月天模式）
+r,R ddd,dd MMM yyyy,HH':'mm':'ss 'GMT' RFC1123Pattern （RFC1123模式）
+S yyyy-MM-dd HH:mm:ss SortableDateTimePattern (conforms to ISO 8601) using local time（使用本地时间的可排序模式）
+T HH:mm ShortTimePattern （短时间模式）
+T HH:mm:ss LongTimePattern（长时间模式）
+U yyyy-MM-dd HH:mm:ss UniversalSortable-DateTimePattern (conforms to ISO 8601) using universal time（通用可排序模式）
+U dddd,MMMM dd,yyyy,HH:mm:ss UniversalSortable-DateTimePattern（通用可排序模式）
+y,Y MMMM,yyyy YearMonthPattern（年月模式）
+示例：
+         static void Main()   
+         {
+                  Console.WriteLine("{0:D}",DateTime.Now);   //输出到天
+                   Console.WriteLine("{0:y}",DateTime.Now);   //输出到月
+                   Console.WriteLine("{0:m}",DateTime.Now);    //取出是那个月
+                   Console.WriteLine("{0:T}",DateTime.Now);   // 取长时间到秒
+                   Console.WriteLine("{0:t}",DateTime.Now);   //取短时间到分
+                   Console.WriteLine("{0:tt}",DateTime.Now);   //取出是上午还是下午     
+         }
